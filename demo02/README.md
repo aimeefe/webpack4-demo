@@ -1,6 +1,6 @@
 # webpack4 配置开发服务（webpack-dev-server）& 自动生成 HTML
 
-## 安装 webpack & webpack-dev-server & html-webpack-plugin
+## 安装依赖
 
 ```
 yarn init -y
