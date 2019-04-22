@@ -1,4 +1,4 @@
-# webpack4-demo 打包js
+# webpack4 打包 JS 文件
 
 ## 安装 webpack
 
