@@ -102,7 +102,7 @@ entry: ['./fileA.js', './fileB.js']
 
 ### 出口[output]
 
-`webpack`通过`output`来指定打包后输出文件的路径与文件名，它是一个对象，包含以下属性：
+`webpack`通过`output`来指定打包后输出文件的路径与文件名，它是一个对象，常用以下属性：
 - filename：文件名，如果配置了多入口，则文件名可以通过占位符[name]来保持名称的唯一性及实现多出口的配置，如下：
 
   - 单出口文件名：filename: 'boundle.js'
