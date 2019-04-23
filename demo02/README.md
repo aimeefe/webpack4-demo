@@ -1,13 +1,15 @@
 # webpack4 配置开发服务（webpack-dev-server）& 自动生成 HTML
 
-## 安装 webpack & webpack-dev-server & html-webpack-plugin
+## 安装依赖
 
 ```
 yarn init -y
 
 yarn add webpack webpack-cli webpack-dev-server html-webpack-plugin -D
-
 ```
+
+- 插件 [webpack-dev-server](https://webpack.docschina.org/guides/development/#%E4%BD%BF%E7%94%A8-webpack-dev-server)：web server & live reloading(实时重新加载) 
+- 插件 [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#configuration)：HTML文件的创建
 
 ## 本地服务配置
 
