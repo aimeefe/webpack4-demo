@@ -22,16 +22,16 @@
 ```
 // ...
 module.exports = {
-	// ...
+  // ...
 
-	//模块配置
-	module: {
-		rules: [
-			{ test: /\.css/, use: ['style-loader', 'css-loader']}
-		]
-	}
+  //模块配置
+  module: {
+    rules: [
+      { test: /\.css/, use: ['style-loader', 'css-loader']}
+    ]
+  }
 
-	// ...
+  // ...
 }
 ```
 
@@ -48,16 +48,16 @@ module.exports = {
 ```
 // ...
 module.exports = {
-	// ...
+  // ...
 
-	//模块配置
-	module: {
-		rules: [
-			{test: /\.(css|less)$/, use: ['style-loader', 'css-loader', 'less-loader']},
-		]
-	}
+  //模块配置
+  module: {
+    rules: [
+      {test: /\.(css|less)$/, use: ['style-loader', 'css-loader', 'less-loader']},
+    ]
+  }
 
-	// ...
+  // ...
 }
 ```
 
@@ -74,16 +74,16 @@ module.exports = {
 ```
 // ...
 module.exports = {
-	// ...
+  // ...
 
-	//模块配置
-	module: {
-		rules: [
-			{test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader']}
-		]
-	}
+  //模块配置
+  module: {
+    rules: [
+      {test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader']}
+    ]
+  }
 
-	// ...
+  // ...
 }
 ```
 
@@ -104,27 +104,27 @@ module.exports = {
 module.exports = {
   // ...
 
-	//模块配置
-	module: {
-		rules: [{
-			test: /\.(css|scss)$/,
-			use: [
-				'style-loader',
-				'css-loader',
-				{
-					loader: 'postcss-loader',
-					options: {
-						plugins: [
-							require('autoprefixer')({browsers: ['last 5 versions']})
-						]
-					}
-				},
-				'sass-loader'
-			]
-		}, ]
-	},
+  //模块配置
+  module: {
+    rules: [{
+      test: /\.(css|scss)$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+	  loader: 'postcss-loader',
+	  options: {
+	    plugins: [
+              require('autoprefixer')({browsers: ['last 5 versions']})
+	    ]
+	  }
+        },
+        'sass-loader'
+      ]
+    }]
+  },
 
-	// ...
+  // ...
 }
 
 ```
@@ -149,45 +149,45 @@ let OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin'); //压缩c
 
 
 module.exports = {
-	// ...
+  // ...
 
-	//模块配置
-	module: {
-		rules: [{
-			test: /\.(css|scss)$/,
-			use: [
+  //模块配置
+  module: {
+    rules: [{
+      test: /\.(css|scss)$/,
+      use: [
 
-				//将style-loader 改为 MiniCssExtractPlugin.loader，表示该类型的文件会被抽离成一个独立 css 文件，link 到 html 中。
-				MiniCssExtractPlugin.loader,
-				'css-loader',
-				{
-					loader: 'postcss-loader',
-					options: {
-						plugins: [
-							require('autoprefixer')({browsers: ['last 5 versions']})
-						]
-					}
-				},
-				'sass-loader'
-			]
-		}, ]
-	},
+      //将style-loader 改为 MiniCssExtractPlugin.loader，表示该类型的文件会被抽离成一个独立 css 文件，link 到 html 中。
+      MiniCssExtractPlugin.loader,
+        'css-loader',
+        {
+	  loader: 'postcss-loader',
+	  options: {
+	    plugins: [
+	      require('autoprefixer')({browsers: ['last 5 versions']})
+	    ]
+	  }
+        },
+        'sass-loader'
+      ]
+    }]
+  },
 
-	// webpack 插件配置
-	plugins: [
+  // webpack 插件配置
+  plugins: [
 
-		//抽离css
-		new MiniCssExtractPlugin({
-			filename: 'css/[name][hash].css'  //抽离出的css文件存放在css目录下
-			// filename: '[name].css' //抽离出的css文件名称
-		})
-	],
+    //抽离css
+    new MiniCssExtractPlugin({
+      filename: 'css/[name][hash].css'  //抽离出的css文件存放在css目录下
+      // filename: '[name].css' //抽离出的css文件名称
+    })
+  ],
 
-	//优化项配置
-	optimization: {
-		minimizer: [
-			new OptimizeCssPlugin()  //压缩css
-		]
-	}
+  //优化项配置
+  optimization: {
+    minimizer: [
+      new OptimizeCssPlugin()  //压缩css
+    ]
+  }
 }
 ```
