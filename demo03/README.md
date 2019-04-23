@@ -189,5 +189,5 @@ module.exports = {
       new OptimizeCssPlugin()  //压缩css
     ]
   }
-} 
+}
 ```
