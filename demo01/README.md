@@ -17,12 +17,12 @@ yarn add webpack webpack-cli -D
 let path = require('path'); //内置模块
 
 module.exports = {
-	// ...
-	entry: './src/fileA.js', //入口
-	output: {
-		filename: 'fileA.js', //打包后的文件名
-		path: path.resolve(__dirname, 'dist') //路径 - 必须是绝对路径
-	}
+  // ...
+  entry: './src/fileA.js', //入口
+  output: {
+    filename: 'fileA.js', //打包后的文件名
+    path: path.resolve(__dirname, 'dist') //路径 - 必须是绝对路径
+  }
 }
 ```
 
@@ -34,12 +34,12 @@ module.exports = {
 let path = require('path'); //内置模块
 
 module.exports = {
-	// ...
-	entry: ['./src/fileA.js', './src/fileB.js'],
-	output: {
-		filename: 'boundle.js',
-		path: path.resolve(__dirname, 'dist')
-	}
+  // ...
+  entry: ['./src/fileA.js', './src/fileB.js'],
+  output: {
+    filename: 'boundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
 }
 ```
 
@@ -50,15 +50,15 @@ module.exports = {
 let path = require('path'); //内置模块
 
 module.exports = {
-	//...
-	entry: {
-		fileA: './src/fileA.js',
-		fileB: './src/fileB.js'
-	},
-	output: {
-		filename: '[name].js',
-		path: path.resolve(__dirname, 'dist')
-	}
+  //...
+  entry: {
+    fileA: './src/fileA.js',
+    fileB: './src/fileB.js'
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist')
+  }
 }
 ```
 
