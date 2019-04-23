@@ -135,9 +135,9 @@ module.exports = {
 
 ```yarn add mini-css-extract-plugin optimize-css-assets-webpack-plugin -D```
 
-- 插件[MiniCssExtractPlugin](https://webpack.docschina.org/plugins/mini-css-extract-plugin/#src/components/Sidebar/Sidebar.jsx)：将CSS提取为独立的文件的插件，对每个包含css的js文件都会创建一个CSS文件，支持按需加载css和sourceMap
+- [MiniCssExtractPlugin](https://webpack.docschina.org/plugins/mini-css-extract-plugin/#src/components/Sidebar/Sidebar.jsx)：将CSS提取为独立的文件的插件，对每个包含css的js文件都会创建一个CSS文件，支持按需加载css和sourceMap
 
-- 插件 optimize-css-assets-webpack-plugin：压缩 `css` 文件
+- optimize-css-assets-webpack-plugin：压缩 `css` 文件
 
 ### 使用
 
