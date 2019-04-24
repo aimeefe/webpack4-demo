@@ -7,7 +7,7 @@
 ### 管理输出
 
 - [自动生成 html 文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo02)
-- 清理 dist 目录
+- [清理 dist 目录](https://github.com/aimeefe/wepack4-demo/tree/master/demo04)
 
 ### 开发辅助
 - webpack-dev-server 开发服务配置
