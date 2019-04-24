@@ -1,4 +1,4 @@
-# wepack4-demo
+# wepack4 demo
 
 # 快速入门
 
