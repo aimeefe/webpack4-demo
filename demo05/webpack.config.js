@@ -1,6 +1,5 @@
 let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
-let CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -43,9 +42,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pageA.html',
       filename: 'index.html'
-    }),
-
-    //清理 dist 目录
-    new CleanWebpackPlugin(),
+    })
   ]
 }
