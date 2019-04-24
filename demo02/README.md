@@ -1,4 +1,4 @@
-# 自动生成 html 文件
+# webpack4 自动生成 html 文件
 
 ## 安装
 
@@ -14,7 +14,7 @@
 
 ## 使用
 
-####基础配置
+#### 基础配置
 
 打开 `wwbpack.config.js`配置文件，进行如下配置：
 
@@ -22,18 +22,17 @@
 let HtmlWebpackPlugin = require('html-webpack-plugin')  //自动生成 html
 
 module.exports = {
-	// ...
+  // ...
 
-	//插件管理
-	plugins: [
+  //插件管理
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',  //模板
+      filename: 'index.html'  //生成的 html 文件名称
+    })
+  ]
 
-		new HtmlWebpackPlugin({
-			template: './src/index.html',  //模板
-			filename: 'index.html'  //生成的 html 文件名称
-		})
-	]
-
-	// ...
+  // ...
 }
 ```
 
@@ -49,18 +48,17 @@ module.exports = {
 
 ```
 //插件配置
-  plugins: [
-    new HtmlWebpackPlugin({
+plugins: [
+  new HtmlWebpackPlugin({
+    //...
 
-			//...
-
-			//优化配置
-			minify: {
-				collapseWhitespace: true, //折叠空行
-				removeAttributeQuotes: true  //删除双引号
-			}
-    })
-  ]
+    //优化配置
+    minify: {
+      collapseWhitespace: true, //折叠空行
+      removeAttributeQuotes: true  //删除双引号
+    }
+  })
+]
 
 ```
 
