@@ -1,1 +1,1 @@
-console.log('pageA!');
+console.log('pageA');
