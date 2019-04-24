@@ -2,7 +2,7 @@
 
 ### 快速入门
 
-🍃 [webpack4 打包 JS 文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo01)
+- [webpack4 打包 JS 文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo01)
 
 ### 管理输出
 
@@ -17,7 +17,7 @@
 
 ### 管理资源
 
-🍃 [样式处理 - css、less、scss、Autoprefixer](https://github.com/aimeefe/wepack4-demo/tree/master/demo03)
+- [样式处理 - css、less、scss、Autoprefixer](https://github.com/aimeefe/wepack4-demo/tree/master/demo03)
 
 ### 开发环境
 ### 基本概念
