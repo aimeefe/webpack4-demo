@@ -19,7 +19,7 @@
 打开 `wwbpack.config.js`配置文件，进行如下配置：
 
 ```
-let HtmlWebpackPlugin = require('html-webpack-plugin')
+let HtmlWebpackPlugin = require('html-webpack-plugin')  //自动生成 html
 
 module.exports = {
 	// ...
