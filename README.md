@@ -6,7 +6,7 @@
 
 ### 管理输出
 
-- 自动生成 html 文件
+- [自动生成 html 文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo02)
 - 清理 dist 目录
 
 ### 开发辅助
