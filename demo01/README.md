@@ -34,7 +34,7 @@ module.exports = {
 let path = require('path'); //内置模块
 
 module.exports = {
-	// ...
+  // ...
 	entry: ['./src/fileA.js', './src/fileB.js'],
 	output: {
 		filename: 'boundle.js',
