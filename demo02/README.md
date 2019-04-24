@@ -4,11 +4,14 @@
 
 #### 安装 webpack
 
-`yarn add webpack webpack-cli -D`
+```
+yarn init -y
+yarn add webpack webpack-cli -D
+```
 
 #### 安装 webpack-html-plugin
 
-`yarn add webpack-html-plugin -D`
+```yarn add webpack-html-plugin -D```
 
 `webpack-html-plugin` 可以帮助我们生成`html`文件，并且自动引入编译好的`js`，可以简化`html`文件的创建。
 
