@@ -39,8 +39,6 @@ yarn add webpack webpack-cli webpack-merge -D
 ###### 配置 webpack.common.config.js：
 
 ```
-// ...
-
 module.exports = {
  // TODO 一些公共配置
 }
@@ -49,7 +47,6 @@ module.exports = {
 ###### 配置 webpack.dev.config.js 文件：
 
 ```
-// ...
 let merge = require('webpack-merge')
 let common = require('./webpack.common.config')
 
@@ -64,7 +61,6 @@ module.exports = merge(common, {
 ###### 配置 webpack.pro.config.js :
 
 ```
-// ...
 let merge = require('webpack-merge')
 let common = require('./webpack.common.config')
 
