@@ -31,7 +31,7 @@ yarn init -y
 yarn add webpack webpack-cli webpack-merge -D
 ```
 
-- `webpack.common.config.js`的公共文件需要合并到其他两个配置文件中，可以用`webpack-merge`来帮我们完成合并。
+- `webpack.common.config.js`的公共文件需要合并到其他两个配置文件中，可以用`webpack-merge`。
 
 
 ### 第四步：配置 webpack 的配置文件
