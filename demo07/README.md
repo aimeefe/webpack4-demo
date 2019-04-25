@@ -33,4 +33,4 @@ module.exports = {
 }
 ```
 
-即可！
+即可。
