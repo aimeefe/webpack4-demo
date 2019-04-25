@@ -12,7 +12,7 @@
 ### 开发辅助
 - [webpack-dev-server 开发服务配置](https://github.com/aimeefe/wepack4-demo/tree/master/demo05)
 - ESlint校验代码规范
-- 区分&共用不同环境的webpack配置文件
+- [区分&共用不同环境的webpack配置文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
 
 ### 管理资源
 
