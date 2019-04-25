@@ -2,7 +2,7 @@
 
 ### 快速入门
 
-- [webpack4 打包 JS 文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo01)
+- [打包 JS 文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo01)
 
 ### 管理输出
 
@@ -11,8 +11,8 @@
 
 ### 开发辅助
 - [webpack-dev-server 开发服务配置](https://github.com/aimeefe/wepack4-demo/tree/master/demo05)
-- ESlint校验代码规范
-- [区分&共用不同环境的webpack配置文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
+- ESlint 校验代码规范
+- [webpack 配置文件的区分与合并](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
 
 ### 管理资源
 
