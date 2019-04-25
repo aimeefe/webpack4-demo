@@ -17,6 +17,7 @@
 ### 管理资源
 
 - [样式处理 - css、less、scss、Autoprefixer](https://github.com/aimeefe/wepack4-demo/tree/master/demo03)
+- [babel 转化 es6 语法](https://github.com/aimeefe/wepack4-demo/tree/master/demo07)
 
 ### 开发环境
 ### 基本概念
