@@ -26,20 +26,12 @@
 
 ### 第三步：安装依赖
 
-本例中用到了以下依赖：
-
-- 安装webpack：`webpack` 、`webpack-cli`
-- 开发环境配置：开发服务配置 - `webpack-dev-server`
-- 公共环境配置：自动生成 html 文件 - `html-webpack-plugin`，清理 dist 目录 - `clean-webpack-plugin`
-
-`webpack.common.config.js`的文件需要合并到其他两个配置文件中，可以用`webpack-merge`依赖来帮我们完成合并。
-
-以上，
-
 ```
 yarn init -y
-yarn add webpack webpack-cli webpack-dev-server html-webpack-plugin clean-webpack-plugin webpack-merge -D
+yarn add webpack webpack-cli webpack-merge -D
 ```
+
+- `webpack.common.config.js`的公共文件需要合并到其他两个配置文件中，可以用`webpack-merge`来帮我们完成合并。
 
 
 ### 第四步：配置 webpack 的配置文件
@@ -47,34 +39,17 @@ yarn add webpack webpack-cli webpack-dev-server html-webpack-plugin clean-webpac
 ###### 配置 webpack.common.config.js：
 
 ```
-let path = require('path')
-let HtmlWebpackPlugin = require('html-webpack-plugin')
-let CleanWebpackPlugin = require('clean-webpack-plugin')
+// ...
 
 module.exports = {
-  entry: './src/pageA.js',
-  output: {
-    filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  plugins: [
-
-    //自动生成 html
-    new HtmlWebpackPlugin({
-      template: './src/pageA.html',
-      filename: 'index.html'
-    }),
-
-    //清空 dist 目录
-    new CleanWebpackPlugin()
-  ]
+ // TODO 一些公共配置
 }
 ```
 
 ###### 配置 webpack.dev.config.js 文件：
 
 ```
-let path = require('path')
+// ...
 let merge = require('webpack-merge')
 let common = require('./webpack.common.config')
 
@@ -82,25 +57,21 @@ let common = require('./webpack.common.config')
 module.exports = merge(common, {
   mode: 'development',
 
-  // 开发服务配置
-  devServer: {
-    port: 3000,
-    open: true,
-    contentBase: path.join(__dirname, 'dist')
-  }
+  // TODO 一些开发环境需要的配置
 })
 ```
 
 ###### 配置 webpack.pro.config.js :
 
 ```
+// ...
 let merge = require('webpack-merge')
 let common = require('./webpack.common.config')
 
 module.exports = merge(common, {
   mode: 'production'
 
-  //TODO MORE ...
+  //TODO 一些生产环境需要的配置
 })
 ```
 
