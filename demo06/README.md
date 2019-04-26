@@ -78,3 +78,4 @@ module.exports = merge(common, {
 - 生产环境：```npm run build```
 
 不同环境下的`webpack`配置文件思路大概就是这样了，可以根据需求在不同的配置文件下完成对项目的配置。
+ 
