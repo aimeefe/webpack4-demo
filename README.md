@@ -1,4 +1,4 @@
-# wepack4 demo
+# webpack4 demo
 
 ### 快速入门
 
