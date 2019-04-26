@@ -1,4 +1,4 @@
-# webpack-dev-server 开发服务配置
+# webpack-dev-server 开发服务配置 & proxy 代理配置
 
 `webpack`中可以使用`watch`来监测文件的改动，解决了每次修改都需要手动编译的麻烦，使用方法如下：
 
