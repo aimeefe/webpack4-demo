@@ -47,7 +47,7 @@ $(function () {
 yarn add jquery
 ```
 
-###### 第二步：在文件中通过`import`等方式导入`jquery`使用
+###### 使用：在文件中通过`import`等方式导入`jquery`
 
 ```
 import $ from 'jQuery'
