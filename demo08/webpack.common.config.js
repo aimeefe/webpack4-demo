@@ -39,10 +39,19 @@ module.exports = {
 		]
 	},
 
-	//外部扩展 - 不打包外部依赖 jquery
-	// externals: {
-	// 	jquery: 'jQuery'
+	// 解析模块
+	// resolve: {
+
+	// 	//配置别名 - $精准匹配
+	// 	alias: {
+	// 		'jQuery$': path.resolve(__dirname, "src/lib/jquery/jquery.min.js")
+	// 	}
 	// },
+
+	//外部扩展 - 不打包外部依赖 jquery
+	externals: {
+		jquery: 'jQuery'
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './src/pageA.html',
