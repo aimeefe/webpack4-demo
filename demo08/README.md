@@ -1,5 +1,8 @@
 # webpack4 使用第三方 JavaScript 库
 
+[webpack 初始配置参考](https://github.com/aimeefe/webpack4-demo/tree/master/demo06)
+
+
 项目中我们经常遇到使用第三方库的情况，比如`lodash`，`jquery`等，使用方式一般有三种：
 
 - CDN 引入
