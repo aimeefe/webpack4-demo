@@ -26,7 +26,7 @@
 
 `webpack`只能理解`JavaScript`和`JSON`文件。`loader`让`webpack`能够去处理其他类型的文件，并将它们转换为有效模块，以供应用程序使用，以及被添加到依赖图中。
 
-###### 样式相关
+###### 资源相关
 
 - [style-loader](https://webpack.docschina.org/loaders/style-loader)：将模块的导出作为样式添加到`DOM`中
 - [css-loader](https://webpack.docschina.org/loaders/css-loader)：解析`CSS`文件后，使用`import`加载，并且返回`CSS`代码
@@ -34,9 +34,11 @@
 - [sass-loader](https://webpack.docschina.org/loaders/sass-loader)：加载和转译`SASS/SCSS`文件
 - [postcss-loader](https://webpack.docschina.org/loaders/postcss-loader)：使用`PostCSS`加载和转译`CSS`文件
 
-###### js相关
-
 - [babel-loader](https://webpack.docschina.org/loaders/babel-loader)：加载`ES6+`代码，然后使用`Babel`转译为`ES5`
+- [file-loader](https://webpack.docschina.org/loaders/file-loader)：将文件发送到输出文件夹，并返回（相对）URL
+
+- [url-loader](https://webpack.docschina.org/loaders/url-loader)：像`file loader`一样工作，但如果文件小于限制，可以转成`base64`
+- [image-webpack-loader](https://www.npmjs.com/package/image-webpack-loader)：优化图片
 
 ### 常用插件
 
