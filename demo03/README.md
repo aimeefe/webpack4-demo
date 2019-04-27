@@ -27,7 +27,7 @@ module.exports = {
   //模块配置
   module: {
     rules: [
-      { test: /\.css/, use: ['style-loader', 'css-loader']}
+      { test: /\.css$/, use: ['style-loader', 'css-loader']}
     ]
   }
 
