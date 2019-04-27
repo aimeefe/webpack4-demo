@@ -17,7 +17,12 @@ module.exports = {
         ],
       },
 
-      // 图片处理
+      // src 图片处理
+      {
+        test: /\.html$/,
+        use: 'html-withimg-loader'
+      },
+      // url 图片处理
       {
         test: /\.(png|svg|jpg|gif|jpeg|ico)$/,
         use: [{
