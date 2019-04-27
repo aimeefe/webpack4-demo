@@ -18,6 +18,7 @@
 
 - [样式处理 - css、less、scss、Autoprefixer](https://github.com/aimeefe/wepack4-demo/tree/master/demo03)
 - [babel 转化 es6 语法](https://github.com/aimeefe/wepack4-demo/tree/master/demo07)
+- [图片处理及优化](https://github.com/aimeefe/wepack4-demo/tree/master/demo09)
 - [使用第三方 JavaScript 库](https://github.com/aimeefe/wepack4-demo/tree/master/demo08)
 
 ### 开发环境
