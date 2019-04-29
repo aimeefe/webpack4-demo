@@ -25,6 +25,12 @@
 - [区分不同环境的 webpack 配置文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
 - [定义环境变量](https://github.com/aimeefe/wepack4-demo/tree/master/demo10)
 
+### 优化
+- 抽离公共模块和第三方模块
+
+
+
+
 
 ### 基本概念
 ### 常用loader
