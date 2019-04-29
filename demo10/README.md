@@ -1,82 +1,46 @@
-# webpack4 区分不同环境的 webpack 配置文件
+# webpack4 定义环境变量
 
-我们`webpack`的配置在不同环境下会有很多差别，比如开发环境需要热更新，生产环境需要压缩代码等。为了方便，我们可以把它们按环境加以区分，方法如下：
+在项目中，开发环境和生产环境很多配置都是不一样的，比如请求接口的地址。
 
-
-### 第一步：创建 webpack 配置文件
-
-根目录下新建 3 个`webpack`配置文件:
-
-- webpack.dev.config.js：开发环境`[developent]`配置文件，存放开发时需要的配置
-- webpack.pro.config.js：生产环境`[production]`配置文件，存放生产环境需要的配置
-- webpack.common.config.js：公用配置文件，存放正式环境和开发环境同时需要的配置
-
-
-### 第二步：配置脚本命令
-
-打开`package.json`文件，配置不同环境下的命令：
+所以我们需要环境标识来帮助区分当前所处的环境，并做出相应的调整，以接口文件举例来说，用法类似这样：
 
 ```
-"scripts": {
-   "dev": "webpack-dev-server --config webpack.dev.config.js",   //开发环境
-   "build": "webpack --config webpack.pro.config.js"  //生产环境
- }
-```
+//server.js 文件
 
-
-### 第三步：安装依赖
-
-```
-yarn init -y
-yarn add webpack webpack-cli webpack-merge -D
-```
-
-- `webpack.common.config.js`的公共文件需要合并到其他两个配置文件中，可以用`webpack-merge`。
-
-
-### 第四步：配置 webpack 的配置文件
-
-###### 配置 webpack.common.config.js：
-
-```
-module.exports = {
- // TODO 一些公共配置
+if (process.env.NODE_ENV === 'production') {
+  console.log('现在是生产环境了，做点啥吧...');
+} else {
+  console.log('开发环境...');
 }
 ```
 
-###### 配置 webpack.dev.config.js 文件：
+其中，用了`process.env.NODE_ENV`来帮助我们区分环境，但是这个值需要我们来配置并不是默认就存在了的，早期`webpack`可以通过`webpack..DefinePlugin()`来配置环境变量，像这样：
 
 ```
-let merge = require('webpack-merge')
-let common = require('./webpack.common.config')
-
-// 合并两个 webpack 配置文件 module.exports = merge(A, B)
-module.exports = merge(common, {
-  mode: 'development',
-
-  // TODO 一些开发环境需要的配置
+new Webpack.DefinePlugin({
+  "process.env": {
+    NODE_ENV: JSON.stringify("production")
+  }
 })
 ```
 
-###### 配置 webpack.pro.config.js :
+而在`webpack4`中，简化了对环境的配置，我们只需设置`mode`，`process.env.NODE_ENV`就会自动同步`mode`配置的值，如下：
 
 ```
-let merge = require('webpack-merge')
-let common = require('./webpack.common.config')
-
+// webpack.dev.config.js
 module.exports = merge(common, {
-  mode: 'production'
+  //process.env.NODE_ENV === 'development'
+  mode: 'development' 
+})
 
-  //TODO 一些生产环境需要的配置
+// webpack.pro.config.js
+module.exports = merge(common, {
+  //process.env.NODE_ENV === 'production'
+  mode: ''production
 })
 ```
 
+不光如此，`mode`来帮我们做了很多默认配置，像是`production`模式下自动压缩代码等等，具体文档都有写，传送门：[mode 模式](https://webpack.docschina.org/concepts/mode/#src/components/Sidebar/Sidebar.jsx)
 
-### 运行命令
 
-- 开发环境：```npm run dev```
-- 生产环境：```npm run build```
 
-不同环境下的`webpack`配置文件思路大概就是这样了，可以根据需求在不同的配置文件下完成对项目的配置。
- 
- 
