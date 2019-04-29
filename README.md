@@ -21,7 +21,7 @@
 - [图片处理及优化](https://github.com/aimeefe/wepack4-demo/tree/master/demo09)
 - [使用第三方 JavaScript 库](https://github.com/aimeefe/wepack4-demo/tree/master/demo08)
 
-### 开发环境
+### 环境
 - 定义环境变量
 - [区分不同环境的 webpack 配置文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
 ### 基本概念
