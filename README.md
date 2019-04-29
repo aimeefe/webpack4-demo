@@ -12,7 +12,7 @@
 ### 开发辅助
 - [webpack-dev-server 开发服务](https://github.com/aimeefe/wepack4-demo/tree/master/demo05)
 - ESlint 校验代码规范
-- [webpack 配置文件的区分与合并](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
+
 
 ### 管理资源
 
@@ -22,6 +22,8 @@
 - [使用第三方 JavaScript 库](https://github.com/aimeefe/wepack4-demo/tree/master/demo08)
 
 ### 开发环境
+- 定义环境变量
+- [区分不同环境的 webpack 配置文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
 ### 基本概念
 ### 常用loader
 
