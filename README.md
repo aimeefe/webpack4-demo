@@ -22,8 +22,10 @@
 - [使用第三方 JavaScript 库](https://github.com/aimeefe/wepack4-demo/tree/master/demo08)
 
 ### 环境
-- 定义环境变量
 - [区分不同环境的 webpack 配置文件](https://github.com/aimeefe/wepack4-demo/tree/master/demo06)
+- [定义环境变量](https://github.com/aimeefe/wepack4-demo/tree/master/demo10)
+
+
 ### 基本概念
 ### 常用loader
 
