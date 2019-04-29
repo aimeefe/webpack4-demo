@@ -45,7 +45,7 @@ module.exports = merge(common, {
 // webpack.pro.config.js
 module.exports = merge(common, {
   //process.env.NODE_ENV === 'production'
-  mode: ''production
+  mode: 'production'
 })
 ```
 
