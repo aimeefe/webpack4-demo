@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-其中，用了`process.env.NODE_ENV`来帮助我们区分环境，但是这个值需要我们来配置并不是默认就存在了的，早期`webpack`可以通过`webpack..DefinePlugin()`来配置环境变量，像这样：
+其中，用了`process.env.NODE_ENV`来帮助我们区分环境，但是这个值需要我们来配置并不是默认就存在了的，早期`webpack`可以通过`webpack.DefinePlugin()`来配置环境变量，像这样：
 
 ```
 new Webpack.DefinePlugin({
@@ -24,7 +24,7 @@ new Webpack.DefinePlugin({
 })
 ```
 
-而在`webpack4`中，简化了对环境的配置，我们只需设置`mode`，`process.env.NODE_ENV`就会自动同步`mode`配置的值，如下：
+而在`webpack4`中，简化了相关配置，我们只需设置`mode`，`process.env.NODE_ENV`就会自动同步`mode`配置的值，如下：
 
 ```
 // webpack.dev.config.js
